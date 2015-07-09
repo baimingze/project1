@@ -1,0 +1,24 @@
+{
+ # config file for running single neural network with jones data, training on all of data
+
+ "RMPI_FrameworkScriptFileName": "eca_sequential_framework.R",
+ "scriptFileName": "eca_neural_network_single.R",
+
+ "spotBid": "75%%",
+ 
+ # parameters named as "sharedFile_GZ_*" are assumed to describe data files,
+ # which will be gzipped (if not already) and transferred to specified S3 bucket
+ # (if not already there)
+ "sharedFile_GZ_trainingData": "../data/jones/jones.train.gz",
+ "sharedFile_GZ_testData": "../data/jones/jones.test.gz",
+ 
+ "ec2_head_instance_type": "cc1.4xlarge",
+ 
+ "numberOfNodes": "1",
+ "ensembleSize": "1",
+ "randSeedConfig": "1",
+
+ # neural network parameters
+ "numHidden": "5",
+ "maxIter": "5000"
+}

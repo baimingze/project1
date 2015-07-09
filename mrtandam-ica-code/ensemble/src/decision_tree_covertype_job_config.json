@@ -1,0 +1,29 @@
+{
+ # config file for running ensemble of decision trees ("decision forest")
+ #   with covertype data and k-fold cross-validation
+ 
+ # for test only
+ # "numberOfRTasksOnHead": "4",
+ # "RMPI_FrameworkScriptFileName": "eca_sequential_framework.R",
+   
+ "spotBid": "75%%",
+
+ "scriptFileName": "eca_decision_forest_folds.R",
+ 
+ # parameters named as "sharedFile_GZ_*" are assumed to describe data files,
+ # which will be gzipped (if not already) and transferred to specified S3 bucket
+ # (if not already there)
+ "sharedFile_GZ_data": "../data/covertype/covtype.data.gz",
+ 
+ "ec2_head_instance_type": "cc1.4xlarge",
+ 
+ "numberOfNodes": "2",
+ "ensembleSize": "100",
+ "numberOfFolds": "10",
+  
+ # allowed values: "all" or any integer in range 1 to total number of features in training set
+ "numberFeaturesInSubset": "all",
+ 
+ # allowed values: "all" or any integer in range 1 to total number of instances in training set
+ "numberInstancesInSubset": "1000"
+}

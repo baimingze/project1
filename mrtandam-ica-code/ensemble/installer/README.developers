@@ -1,0 +1,19 @@
+NOTE TO DEVELOPERS
+
+We provide a windows installer and a linux setup script.  The file we provide for the Sourceforge release "Download" button is a zip file containing both these items.  The README file we provide for the Sourceforge release page is in the directory above this one.
+
+BUILDING THE WINDOWS INSTALLER:
+
+You'll need to install the NullSoft NSIS installer dev tools (see http://prdownloads.sourceforge.net/nsis/nsis-2.32-setup.exe?download)
+
+To build the installer, open the ECA_installer.nsi file in the NSIS compiler.
+
+ADDING FILES TO THE INSTALLATION
+
+Most files are downloaded at install time (keeps the installer small, and makes it easier to co-maintain window and linux installers), so you probably want to edit the list of files in src/download_eca.py.
+
+To add files to the windows installer, modify ECA_files.nsh. 
+
+REBUILDING THE SOURCEFORGE DOWNLOAD FILE
+
+The sourceforge download file should contain a fresh build of the windows NSIS-based installer, and the setup_eca.sh file from the installer directory.  There's a script "build_release.py" in the directory above this one that automates the process.

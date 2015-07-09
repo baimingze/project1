@@ -1,0 +1,21 @@
+{
+ # sample config file for running ensemble of decision trees ("decision forest") with satimage data
+ "scriptFileName": "eca_decision_forest.R",
+ 
+ # parameters named as "sharedFile_GZ_*" are assumed to describe data files,
+ # which will be gzipped (if not already) and transferred to specified S3 bucket
+ # (if not already there)
+ "sharedFile_GZ_trainingData": "../data/satimage/sat.trn.gz",
+ "sharedFile_GZ_testData": "../data/satimage/sat.tst.gz",
+ 
+ "ec2_head_instance_type": "m1.small",
+ 
+ "numberOfNodes": "2",
+ "ensembleSize": "64",
+ 
+ # allowed values: "all" or any integer in range 1 to total number of features in training set
+ "numberFeaturesInSubset": "18",
+ 
+ # allowed values: "all" or any integer in range 1 to total number of instances in training set
+ "numberInstancesInSubset": "all"
+}

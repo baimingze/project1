@@ -1,0 +1,12 @@
+{
+ # template for general configuration parameters
+ # the dummy "your-" values below must be replaced with your AWS account's actual
+ #      security credentials and filenames
+
+ "DESCRIPTION": "this file doesn't change often - see the job_config files for per-job settings",
+ "aws_access_key_id": "your-ABCDEFGHIJKLMNO",
+ "aws_secret_access_key": "your-abcdefghijklmnoprqstuvwxyz012345678",
+ "RSAKeyName": "your-keyname",
+ "RSAKeyFileName": "your-localpath/your-pemfilename.pem",
+ "s3bucketID": "your-bucket"
+}

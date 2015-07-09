@@ -1,0 +1,31 @@
+Insilicos Cloud Army
+
+==============
+What is it?
+
+From the description at https://sourceforge.net/projects/ica/ :
+
+"A platform for parallel computation in the Amazon cloud, including machine learning ensembles written in R for computational biology and other areas of scientific research. Home to MR-Tandem, a hadoop-enabled fork of the X!Tandem peptide search engine."
+
+==============
+What's here?
+
+You can grab the source code from http://ica.svn.sourceforge.net/viewvc/ica/ using Subversion:
+svn co https://ica.svn.sourceforge.net/svnroot/ica ica
+
+In the "ensemble" directory you'll find the Ensemble Cloud Army project, for easily creating machine learning ensembles in R on Amazon Web Services, using either MPI with Elastic Compute Cloud (AWS EC2) or Hadoop with Elastic Map Reduce (AWS-EMR).  The R scripts you write work with either framework.
+
+In the "mr-tandem" directory you'll find the MR-Tandem project, which extends the popular X!Tandem open source peptide search engine to use Hadoop on local clusters or in Amazon's Elastic Map Reduce (AWS EMR).  It also provides an implementation of the MPI-parallelized X!!Tandem for running on AWS EC2.  
+
+There's an MR-Tandem paper, too:
+MR-Tandem: Parallel X!Tandem using Hadoop MapReduce on Amazon Web Services 
+Brian Pratt; J. Jeffry Howbert; Natalie I. Tasman; Erik J. Nilsson
+Bioinformatics 2011; doi: 10.1093/bioinformatics/btr615
+
+==============
+Release Notes
+
+Version 2.0 of Ensemble Cloud Army adds:
+	Hadoop capability using Elastic Map Reduce
+	switch to StarCluster AMIs as basis for MPI implementation for improved MPI robustness
+	

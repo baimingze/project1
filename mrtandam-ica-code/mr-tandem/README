@@ -1,0 +1,3 @@
+MR-Tandem is a parallelized version of the X!Tandem search engine for use with Amazon Web Services Elastic Map Reduce or your own Hadoop cluster.
+
+See the QuickStart guide in the doc directory for more information.

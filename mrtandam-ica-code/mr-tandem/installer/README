@@ -1,0 +1,9 @@
+NOTE TO DEVELOPERS
+
+You'll need to install the NullSoft NSIS installer dev tools (see http://prdownloads.sourceforge.net/nsis/nsis-2.32-setup.exe?download)
+
+To build the installer, open the mr-tandem_installer.nsi file in the NSIS compiler.
+
+To add files to the installation set, modify mr-tandem_files.nsh.
+
+You'll notice that this makes extensive use of the installer for Ensemble Cloud Army, don't mess with that.  We rely on it for more than just the installer, it's also used for running in X!!Tandem mode on EC2.

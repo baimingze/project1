@@ -1,0 +1,32 @@
+{
+ # config file for running ensemble of neural networks with jones data
+
+ # for test only
+ # "numberOfRTasksOnHead": "4",
+ # "RMPI_FrameworkScriptFileName": "eca_sequential_framework.R",
+
+ "spotBid": "75%%",
+ 
+ "scriptFileName": "eca_neural_network_ensemble.R",
+ 
+ # parameters named as "sharedFile_GZ_*" are assumed to describe data files,
+ # which will be gzipped (if not already) and transferred to specified S3 bucket
+ # (if not already there)
+ "sharedFile_GZ_trainingData": "../data/jones/jones.train.gz",
+ "sharedFile_GZ_testData": "../data/jones/jones.test.gz",
+ 
+ "ec2_head_instance_type": "cc1.4xlarge",
+ 
+ "numberOfNodes": "1",
+ "ensembleSize": "100",
+
+ # neural network parameters
+ "numHidden": "5",
+ "maxIter": "1000",
+ 
+ # allowed values: "all" or any integer in range 1 to total number of features in training set
+ "numberFeaturesInSubset": "all",
+ 
+ # allowed values: "all" or any integer in range 1 to total number of instances in training set
+ "numberInstancesInSubset": "1000"
+}
