@@ -3,16 +3,16 @@
  #the dummy "your-" values below must be replaced with your AWS account's actual
  #      security credentials and filenames
 
- "DESCRIPTION": "this file doesn't change often - see the job_config files for per-job settings",
- "aws_access_key_id": "your-ABCDEFGHIJKLMNO",
- "aws_secret_access_key": "your-abcdefghijklmnoprqstuvwxyz012345678",
- "RSAKeyName": "your-keyname",
- "RSAKeyFileName": "your-localpath/your-pemfilename.pem",
- "s3bucketID": "your-bucket",
+# "DESCRIPTION": "this file doesn't change often - see the job_config files for per-job settings",
+# "aws_access_key_id": "your-ABCDEFGHIJKLMNO",
+# "aws_secret_access_key": "your-abcdefghijklmnoprqstuvwxyz012345678",
+# "RSAKeyName": "your-keyname",
+# "RSAKeyFileName": "your-localpath/your-pemfilename.pem",
+# "s3bucketID": "your-bucket",
 
  # For your private hadoop cluster,You'll need to add a few more entries to your main config file
- "hadoop_home": "<your hadoop install directory>", # directory below which "bin/hadoop" can be found
- "tandem_url": "<something like http://insilicos-public.s3.amazonaws.com/centos/x86_64/tandem>", # where to get the tandem executable (can be a local file if you build your own)
- "hadoop_dir": "<your hdfs dir on cluster>", # your HDFS directory on the cluster
- "numberOfMappers": "<number of mappers you want to ask the cluster for>"
+ "hadoop_home": "/opt/hadoop-0.20.1+152/", # directory below which "bin/hadoop" can be found
+ "tandem_url": "/home/mingze/work/sangzhe/mrtandem_bin/tandem", # where to get the tandem executable (can be a local file if you build your own)
+ "hadoop_dir": "/tmp/hadoop-mingze/dfs/name", # your HDFS directory on the cluster
+ "numberOfMappers": "1",
 }
